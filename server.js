@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs=require('hbs')
+const port=process.env.PORT || 3001;
 var app=express();
 
 app.set('view engine','hbs')
@@ -18,4 +19,4 @@ res.send({name:"kiril",age:10});
 app.get('/about',(req,res)=>{
   res.render('about.hbs');
 })
-app.listen(3000);
+app.listen(port);
